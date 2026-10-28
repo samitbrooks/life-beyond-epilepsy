@@ -19,6 +19,29 @@
 </div>
 
 <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-12">
+    <!-- Kitale Clinical Evaluation Banner -->
+    <div class="relative rounded-3xl overflow-hidden shadow-xl border border-purple-100 bg-white">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-0 items-center">
+            <div class="lg:col-span-6 relative h-64 sm:h-72">
+                <img src="{{ asset('images/kitale-clinic.png') }}" alt="Clinical consultation in Kitale, Trans-Nzoia County" class="w-full h-full object-cover">
+                <div class="absolute bottom-3 left-3 bg-slate-900/80 backdrop-blur-md px-3 py-1.5 rounded-xl text-white text-xs font-bold">
+                    📍 Kitale Clinic Consultation • Trans-Nzoia County
+                </div>
+            </div>
+            <div class="lg:col-span-6 p-6 sm:p-8 space-y-3">
+                <span class="text-[11px] font-black uppercase tracking-wider text-[#45017A] bg-purple-100 px-3 py-1 rounded-full">
+                    County Diagnostic Access
+                </span>
+                <h2 class="text-xl sm:text-2xl font-black text-slate-900">
+                    Verified Healthcare in Trans-Nzoia
+                </h2>
+                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    Navigating healthcare shouldn't be confusing. We map public referral hospitals, sub-county clinics, and registered pharmacies across Kitale, Kiminini, Cherangany, Endebess, and Saboti so you know exactly where to go.
+                </p>
+            </div>
+        </div>
+    </div>
+
     <!-- Mandatory Disclaimer Box (Section 4.1 Requirement) -->
     <div class="p-6 rounded-2xl bg-amber-50 border border-amber-200 text-amber-900 text-sm flex items-start gap-3">
         <svg class="w-6 h-6 text-amber-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>

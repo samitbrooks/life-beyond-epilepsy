@@ -19,6 +19,29 @@
 </div>
 
 <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-12">
+    <!-- Real Impact Photo Card -->
+    <div class="relative rounded-3xl overflow-hidden shadow-xl border border-purple-100 bg-white">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-0 items-center">
+            <div class="lg:col-span-6 relative h-64 sm:h-72">
+                <img src="{{ asset('images/school-inclusion.jpg') }}" alt="African school children in Kenya supported by community epilepsy programs" class="w-full h-full object-cover">
+                <div class="absolute bottom-3 left-3 bg-slate-900/80 backdrop-blur-md px-3 py-1.5 rounded-xl text-white text-xs font-bold">
+                    Classroom Dignity • Trans-Nzoia County
+                </div>
+            </div>
+            <div class="lg:col-span-6 p-6 sm:p-8 space-y-3">
+                <span class="text-[11px] font-black uppercase tracking-wider text-[#45017A] bg-purple-100 px-3 py-1 rounded-full">
+                    Direct Impact
+                </span>
+                <h2 class="text-xl sm:text-2xl font-black text-slate-900">
+                    Your Support Keeps Children in School
+                </h2>
+                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    With your partnership, we supply schools with emergency seizure action plans, fund diagnostic travel subsidies for low-income families, and train teachers across Trans-Nzoia County.
+                </p>
+            </div>
+        </div>
+    </div>
+
     <!-- What Donations Support -->
     <div class="space-y-6">
         <h2 class="text-2xl font-bold text-slate-900">Where Your Support Goes</h2>

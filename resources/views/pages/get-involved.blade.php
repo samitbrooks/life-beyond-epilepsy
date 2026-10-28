@@ -19,6 +19,32 @@
 </div>
 
 <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-16">
+    <!-- Volunteer Hero Photo Feature -->
+    <div class="relative rounded-3xl overflow-hidden shadow-xl border border-purple-100 bg-white">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-0 items-center">
+            <div class="lg:col-span-6 relative h-72 sm:h-80">
+                <img src="{{ asset('images/chw-training.jpg') }}" alt="African community volunteers training together in Kenya" class="w-full h-full object-cover">
+                <div class="absolute bottom-3 left-3 bg-slate-900/80 backdrop-blur-md px-3 py-1.5 rounded-xl text-white text-xs font-bold">
+                    Community Volunteers • Trans-Nzoia County Network
+                </div>
+            </div>
+            <div class="lg:col-span-6 p-6 sm:p-8 space-y-3">
+                <span class="text-[11px] font-black uppercase tracking-wider text-[#45017A] bg-purple-100 px-3 py-1 rounded-full">
+                    Be the Change
+                </span>
+                <h2 class="text-xl sm:text-2xl font-black text-slate-900">
+                    Stand with Families in Trans-Nzoia
+                </h2>
+                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    Volunteering with Life Beyond Epilepsy means equipping a school with seizure safety, calming a worried mother, or organizing a community baraza where myths are erased forever.
+                </p>
+                <div class="pt-2 text-xs font-bold text-[#45017A]">
+                    ✓ No medical experience required for advocacy • Clinical roles available for healthcare workers
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Ways to Volunteer -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div class="p-6 rounded-3xl bg-white border border-purple-100 shadow-xs space-y-2">

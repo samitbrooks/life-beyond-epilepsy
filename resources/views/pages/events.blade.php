@@ -19,6 +19,34 @@
 </div>
 
 <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-12">
+    <!-- Outreach in Action Photo Feature -->
+    <div class="relative rounded-3xl overflow-hidden shadow-xl border border-purple-100 bg-white">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-0 items-center">
+            <div class="lg:col-span-7 relative h-72 sm:h-80">
+                <img src="{{ asset('images/community-outreach.jpg') }}" alt="Community awareness gathering in Kenya" class="w-full h-full object-cover">
+                <div class="absolute bottom-3 left-3 bg-slate-900/80 backdrop-blur-md px-3 py-1.5 rounded-xl text-white text-xs font-bold">
+                    Community Baraza • Trans-Nzoia County Outreach
+                </div>
+            </div>
+            <div class="lg:col-span-5 p-6 sm:p-8 space-y-3">
+                <span class="text-[11px] font-black uppercase tracking-wider text-[#45017A] bg-purple-100 px-3 py-1 rounded-full">
+                    Grassroots Presence
+                </span>
+                <h2 class="text-xl sm:text-2xl font-black text-slate-900">
+                    Meeting Communities Where They Are
+                </h2>
+                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    Our field teams visit marketplaces, chief's barazas, and churches across Kitale, Kiminini, Cherangany, Endebess, and Saboti to bring life-saving first aid knowledge directly to families.
+                </p>
+                <div class="pt-2">
+                    <a href="{{ route('get-involved') }}" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#45017A] hover:bg-[#320059] text-white font-bold text-xs shadow transition">
+                        <span>Volunteer for Upcoming Outreach →</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Upcoming Events -->
     <div class="space-y-6">
         <h2 class="text-2xl font-bold text-slate-900">Upcoming Events (2026/2027)</h2>

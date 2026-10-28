@@ -7,36 +7,61 @@
 <section class="relative overflow-hidden bg-gradient-to-br from-[#320059] via-[#45017A] to-[#1F0038] text-white py-16 sm:py-24">
     <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:16px_16px]"></div>
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-3xl space-y-6">
-            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-purple-200 text-xs sm:text-sm font-bold">
-                <span class="w-2 h-2 rounded-full bg-[#F29000] animate-pulse"></span>
-                <span>{{ __('site.pilot_badge') }}</span>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <!-- Left Text Column -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-purple-200 text-xs sm:text-sm font-bold">
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#F29000] animate-pulse"></span>
+                    <span>{{ __('site.pilot_badge') }}</span>
+                </div>
+                
+                <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight">
+                    {{ __('site.home.hero_title') }}
+                </h1>
+
+                <p class="text-base sm:text-xl text-purple-100/90 leading-relaxed font-normal">
+                    {{ __('site.home.hero_subtitle') }}
+                </p>
+
+                <!-- Main CTA Buttons (From Section 3 Home requirements) -->
+                <div class="flex flex-wrap items-center gap-3 pt-2">
+                    <a href="{{ route('awareness') }}" class="px-5 py-3 rounded-xl bg-white text-[#45017A] font-black text-sm shadow hover:bg-purple-50 transition flex items-center gap-2">
+                        <span>{{ __('site.home.cta_learn') }}</span>
+                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </a>
+                    <a href="{{ route('navigator') }}" class="px-5 py-3 rounded-xl bg-[#8034FA] text-white font-bold text-sm shadow hover:bg-[#6D28D9] border border-purple-400/30 transition flex items-center gap-2">
+                        <svg class="w-4 h-4 text-[#F29000]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+                        <span>{{ __('site.home.cta_navigator') }}</span>
+                    </a>
+                    <a href="{{ route('get-involved') }}" class="px-5 py-3 rounded-xl bg-white/10 text-purple-100 font-bold text-sm hover:bg-white/20 border border-white/20 transition">
+                        {{ __('site.home.cta_involved') }}
+                    </a>
+                    <a href="{{ route('donate') }}" class="px-5 py-3 rounded-xl bg-[#F29000] text-slate-950 font-black text-sm shadow hover:bg-[#D97706] transition">
+                        {{ __('site.home.cta_donate') }}
+                    </a>
+                </div>
             </div>
-            
-            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight">
-                {{ __('site.home.hero_title') }}
-            </h1>
 
-            <p class="text-base sm:text-xl text-purple-100/90 leading-relaxed font-normal">
-                {{ __('site.home.hero_subtitle') }}
-            </p>
+            <!-- Right Hero Image Column (Authentic Clinical Consultation in Kenya) -->
+            <div class="lg:col-span-5 relative">
+                <div class="relative rounded-3xl overflow-hidden shadow-2xl border-2 border-white/20 bg-purple-950/40">
+                    <img src="{{ asset('images/hero-clinical.jpg') }}" alt="Kenyan healthcare professional consulting with mother and child in Trans-Nzoia" class="w-full h-80 sm:h-96 object-cover object-center transform hover:scale-105 transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#1F0038]/90 via-transparent to-transparent"></div>
+                    
+                    <!-- Floating Pill Badge -->
+                    <div class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-3.5 rounded-2xl shadow-lg border border-purple-100 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-[#45017A] text-[#F29000] flex items-center justify-center font-black text-lg shrink-0">
+                            ✓
+                        </div>
+                        <div class="overflow-hidden">
+                            <span class="text-xs font-black text-[#45017A] block leading-tight">Dignified Care & Medical Navigation</span>
+                            <span class="text-[11px] text-slate-600 font-medium block truncate">Trans-Nzoia County • Pilot Clinical Network</span>
+                        </div>
+                    </div>
+                </div>
 
-            <!-- Main CTA Buttons (From Section 3 Home requirements) -->
-            <div class="flex flex-wrap items-center gap-3 pt-2">
-                <a href="{{ route('awareness') }}" class="px-5 py-3 rounded-xl bg-white text-[#45017A] font-black text-sm shadow hover:bg-purple-50 transition flex items-center gap-2">
-                    <span>{{ __('site.home.cta_learn') }}</span>
-                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-                </a>
-                <a href="{{ route('navigator') }}" class="px-5 py-3 rounded-xl bg-[#8034FA] text-white font-bold text-sm shadow hover:bg-[#6D28D9] border border-purple-400/30 transition flex items-center gap-2">
-                    <svg class="w-4 h-4 text-[#F29000]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
-                    <span>{{ __('site.home.cta_navigator') }}</span>
-                </a>
-                <a href="{{ route('get-involved') }}" class="px-5 py-3 rounded-xl bg-white/10 text-purple-100 font-bold text-sm hover:bg-white/20 border border-white/20 transition">
-                    {{ __('site.home.cta_involved') }}
-                </a>
-                <a href="{{ route('donate') }}" class="px-5 py-3 rounded-xl bg-[#F29000] text-slate-950 font-black text-sm shadow hover:bg-[#D97706] transition">
-                    {{ __('site.home.cta_donate') }}
-                </a>
+                <!-- Sun Accent Glow -->
+                <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-[#F29000]/20 rounded-full blur-2xl pointer-events-none"></div>
             </div>
         </div>
     </div>
@@ -101,7 +126,7 @@
 <section class="py-14 bg-slate-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-2xl mx-auto mb-10">
-            <span class="text-xs font-bold uppercase tracking-wider text-purple-700 bg-purple-100 px-3 py-1 rounded-full">
+            <span class="text-xs font-bold uppercase tracking-wider text-[#45017A] bg-purple-100 px-3 py-1 rounded-full">
                 Clinician-Reviewed Guidance
             </span>
             <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-3">
@@ -112,36 +137,56 @@
             </p>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="bg-white p-6 rounded-2xl border border-purple-100 shadow-xs flex flex-col justify-between">
-                <div>
-                    <div class="w-10 h-10 rounded-xl bg-purple-100 text-purple-800 font-bold flex items-center justify-center text-lg mb-4">1</div>
-                    <h3 class="font-bold text-slate-900 text-base">{{ __('site.first_aid_summary.step1_title') }}</h3>
-                    <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">{{ __('site.first_aid_summary.step1_desc') }}</p>
+        <!-- First Aid Steps with Action Photo Card -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-8">
+            <!-- First Aid Documentary Photo Card -->
+            <div class="lg:col-span-5">
+                <div class="relative rounded-3xl overflow-hidden shadow-xl border border-purple-100 bg-white">
+                    <img src="{{ asset('images/first-aid-care.jpg') }}" alt="Kenyan community first aid volunteer assisting person in recovery position" class="w-full h-80 object-cover object-center">
+                    <div class="p-4 bg-white/95 border-t border-purple-100">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="w-2.5 h-2.5 rounded-full bg-[#F29000]"></span>
+                            <span class="text-xs font-black uppercase text-[#45017A]">Safe Recovery Position</span>
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed font-medium">
+                            Gently cushion the head with soft folded cloth, loosen tight neckwear, and turn onto one side to maintain an open, clear airway.
+                        </p>
+                    </div>
                 </div>
             </div>
 
-            <div class="bg-white p-6 rounded-2xl border border-purple-100 shadow-xs flex flex-col justify-between">
-                <div>
-                    <div class="w-10 h-10 rounded-xl bg-purple-100 text-purple-800 font-bold flex items-center justify-center text-lg mb-4">2</div>
-                    <h3 class="font-bold text-slate-900 text-base">{{ __('site.first_aid_summary.step2_title') }}</h3>
-                    <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">{{ __('site.first_aid_summary.step2_desc') }}</p>
+            <!-- Steps Grid -->
+            <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="bg-white p-6 rounded-2xl border border-purple-100 shadow-xs flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-purple-100 text-[#45017A] font-black flex items-center justify-center text-lg mb-3">1</div>
+                        <h3 class="font-bold text-slate-900 text-base">{{ __('site.first_aid_summary.step1_title') }}</h3>
+                        <p class="text-xs sm:text-sm text-slate-600 mt-1.5 leading-relaxed">{{ __('site.first_aid_summary.step1_desc') }}</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="bg-white p-6 rounded-2xl border border-purple-100 shadow-xs flex flex-col justify-between">
-                <div>
-                    <div class="w-10 h-10 rounded-xl bg-purple-100 text-purple-800 font-bold flex items-center justify-center text-lg mb-4">3</div>
-                    <h3 class="font-bold text-slate-900 text-base">{{ __('site.first_aid_summary.step3_title') }}</h3>
-                    <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">{{ __('site.first_aid_summary.step3_desc') }}</p>
+                <div class="bg-white p-6 rounded-2xl border border-purple-100 shadow-xs flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-purple-100 text-[#45017A] font-black flex items-center justify-center text-lg mb-3">2</div>
+                        <h3 class="font-bold text-slate-900 text-base">{{ __('site.first_aid_summary.step2_title') }}</h3>
+                        <p class="text-xs sm:text-sm text-slate-600 mt-1.5 leading-relaxed">{{ __('site.first_aid_summary.step2_desc') }}</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="bg-white p-6 rounded-2xl border border-purple-100 shadow-xs flex flex-col justify-between">
-                <div>
-                    <div class="w-10 h-10 rounded-xl bg-purple-100 text-purple-800 font-bold flex items-center justify-center text-lg mb-4">4</div>
-                    <h3 class="font-bold text-slate-900 text-base">{{ __('site.first_aid_summary.step4_title') }}</h3>
-                    <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">{{ __('site.first_aid_summary.step4_desc') }}</p>
+                <div class="bg-white p-6 rounded-2xl border border-purple-100 shadow-xs flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-purple-100 text-[#45017A] font-black flex items-center justify-center text-lg mb-3">3</div>
+                        <h3 class="font-bold text-slate-900 text-base">{{ __('site.first_aid_summary.step3_title') }}</h3>
+                        <p class="text-xs sm:text-sm text-slate-600 mt-1.5 leading-relaxed">{{ __('site.first_aid_summary.step3_desc') }}</p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-purple-100 shadow-xs flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-purple-100 text-[#45017A] font-black flex items-center justify-center text-lg mb-3">4</div>
+                        <h3 class="font-bold text-slate-900 text-base">{{ __('site.first_aid_summary.step4_title') }}</h3>
+                        <p class="text-xs sm:text-sm text-slate-600 mt-1.5 leading-relaxed">{{ __('site.first_aid_summary.step4_desc') }}</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -164,6 +209,124 @@
                 <div class="flex items-start gap-2 bg-white/70 p-3 rounded-xl border border-red-100">
                     <span class="text-red-600 font-bold">✕</span>
                     <span>{{ __('site.first_aid_summary.dont_liquids') }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- School Inclusion & Children in Classrooms Section -->
+<section class="py-16 bg-white border-t border-purple-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <!-- Left Text Content -->
+            <div class="lg:col-span-6 space-y-5">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-50 border border-purple-200 text-[#45017A] text-xs font-bold">
+                    <span class="w-2 h-2 rounded-full bg-[#F29000]"></span>
+                    <span>Youth & Education Initiative</span>
+                </div>
+                <h2 class="text-2xl sm:text-4xl font-black text-slate-900 tracking-tight leading-tight">
+                    Every Child with Epilepsy Has the Right to Learn in Safety
+                </h2>
+                <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+                    Stigma and fear should never prevent a child in Trans-Nzoia from completing their education. Through school workshops, teacher sensitization, and classmate peer empathy, we build classrooms where seizures are met with calm first aid rather than fear.
+                </p>
+
+                <div class="space-y-3 pt-2 text-xs sm:text-sm text-slate-700">
+                    <div class="flex items-start gap-3">
+                        <span class="w-6 h-6 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✓</span>
+                        <span><strong>Individual Seizure Action Plans:</strong> Practical, 1-page emergency guides shared with teachers and headmasters.</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <span class="w-6 h-6 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✓</span>
+                        <span><strong>Anti-Bullying Peer Education:</strong> Dispelling misconceptions that epilepsy is contagious, evil, or cursed.</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <span class="w-6 h-6 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✓</span>
+                        <span><strong>Kenyan Curriculum Inclusion:</strong> Ensuring academic continuity and test accommodations during recovery.</span>
+                    </div>
+                </div>
+
+                <div class="pt-3">
+                    <a href="{{ route('children') }}" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#45017A] hover:bg-[#320059] text-white font-black text-sm shadow-md transition group">
+                        <span>Explore School Toolkit & Resources</span>
+                        <span class="text-[#F29000] group-hover:translate-x-1 transition-transform">→</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Classroom Photo -->
+            <div class="lg:col-span-6 relative">
+                <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-purple-100">
+                    <img src="{{ asset('images/school-inclusion.jpg') }}" alt="African primary school children learning together in Kenyan classroom" class="w-full h-80 sm:h-96 object-cover object-center transform hover:scale-102 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 right-4 text-white p-2">
+                        <span class="text-xs font-black uppercase tracking-wider text-[#F29000] block">Inclusive Classrooms</span>
+                        <span class="text-xs text-white/90">Supporting students across Kitale, Kiminini, Cherangany, Endebess and Saboti</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Community Advocacy & Voices of Hope Section -->
+<section class="py-16 bg-slate-50 border-t border-purple-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <span class="text-xs font-bold uppercase tracking-wider text-[#45017A] bg-purple-100 px-3 py-1 rounded-full">
+                Grassroots Impact
+            </span>
+            <h2 class="text-2xl sm:text-4xl font-black text-slate-900 mt-3">
+                Breaking Myths, Building Dignity in Trans-Nzoia
+            </h2>
+            <p class="text-sm sm:text-base text-slate-600 mt-2">
+                Real community members, caregivers, and clinicians uniting across Mount Elgon to transform epilepsy perception.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+            <!-- Community Outreach Card -->
+            <div class="bg-white rounded-3xl overflow-hidden border border-purple-100 shadow-sm flex flex-col justify-between group">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="{{ asset('images/community-outreach.jpg') }}" alt="Community healthcare meeting in Kenya" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute top-4 left-4 bg-white/95 px-3 py-1 rounded-full text-xs font-black text-[#45017A] shadow-xs">
+                        Community Barazas
+                    </div>
+                </div>
+                <div class="p-6 sm:p-8 space-y-3 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-black text-slate-900">Grassroots Village Workshops</h3>
+                        <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
+                            We partner with local chiefs, pastors, and Community Health Promoters (CHPs) to engage families, educate village elders, and debunk dangerous myths that associate seizures with curses or witchcraft.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-xs font-bold text-[#45017A]">5 Sub-Counties Covered</span>
+                        <a href="{{ route('events') }}" class="text-xs font-black text-[#F29000] hover:underline">View Campaigns →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Youth Empowerment Card -->
+            <div class="bg-white rounded-3xl overflow-hidden border border-purple-100 shadow-sm flex flex-col justify-between group">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="{{ asset('images/spirited-young-woman.jpg') }}" alt="Empowered young Kenyan woman living beyond epilepsy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute top-4 left-4 bg-white/95 px-3 py-1 rounded-full text-xs font-black text-[#45017A] shadow-xs">
+                        Empowered Living
+                    </div>
+                </div>
+                <div class="p-6 sm:p-8 space-y-3 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-black text-slate-900">Life Beyond Epilepsy: Thriving in Youth</h3>
+                        <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
+                            "Epilepsy is a neurological condition that can be managed. With adherence to anti-seizure medication and empathetic friends, I have excelled in college and am pursuing my career without shame."
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-xs font-bold text-slate-500">Peer Support Champions</span>
+                        <a href="{{ route('impact') }}" class="text-xs font-black text-[#45017A] hover:underline">Read Stories →</a>
+                    </div>
                 </div>
             </div>
         </div>

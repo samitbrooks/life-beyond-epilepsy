@@ -19,6 +19,34 @@
 </div>
 
 <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-12">
+    <!-- Clinical Consultation Showcase -->
+    <div class="relative rounded-3xl overflow-hidden shadow-xl border border-purple-100 bg-white">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-0 items-center">
+            <div class="lg:col-span-6 relative h-72 sm:h-80">
+                <img src="{{ asset('images/hero-clinical.jpg') }}" alt="African healthcare professional consulting with a patient in Kenya" class="w-full h-full object-cover">
+                <div class="absolute bottom-3 left-3 bg-slate-900/80 backdrop-blur-md px-3 py-1.5 rounded-xl text-white text-xs font-bold">
+                    Doctor Consultation • Trans-Nzoia Clinic
+                </div>
+            </div>
+            <div class="lg:col-span-6 p-6 sm:p-8 space-y-3">
+                <span class="text-[11px] font-black uppercase tracking-wider text-[#45017A] bg-purple-100 px-3 py-1 rounded-full">
+                    Certified Clinical Oversight
+                </span>
+                <h2 class="text-xl sm:text-2xl font-black text-slate-900">
+                    Navigating Patients to Verified Care
+                </h2>
+                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    Accurate medical diagnosis is the first and most critical step. Anti-seizure medications require professional prescription, proper dosage titration, and consistent adherence to safeguard neurological health.
+                </p>
+                <div class="pt-2">
+                    <a href="{{ route('navigator') }}" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#45017A] hover:bg-[#320059] text-white font-bold text-xs shadow transition">
+                        <span>Search Trans-Nzoia Health Facilities Directory →</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Non-Negotiable Transparency Box (Section 3 Requirement) -->
     <div class="p-6 rounded-2xl bg-slate-100 border border-slate-300 text-slate-800 text-sm space-y-2">
         <h3 class="font-bold text-slate-900 flex items-center gap-2">

@@ -19,6 +19,29 @@
 </div>
 
 <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-16">
+    <!-- Collaboration Feature Photo -->
+    <div class="relative rounded-3xl overflow-hidden shadow-xl border border-purple-100 bg-white">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-0 items-center">
+            <div class="lg:col-span-6 relative h-64 sm:h-72">
+                <img src="{{ asset('images/pwani-university.jpg') }}" alt="African institutional partners and student researchers collaborating in Kenya" class="w-full h-full object-cover">
+                <div class="absolute bottom-3 left-3 bg-slate-900/80 backdrop-blur-md px-3 py-1.5 rounded-xl text-white text-xs font-bold">
+                    Institutional Collaboration • Kenya
+                </div>
+            </div>
+            <div class="lg:col-span-6 p-6 sm:p-8 space-y-3">
+                <span class="text-[11px] font-black uppercase tracking-wider text-[#45017A] bg-purple-100 px-3 py-1 rounded-full">
+                    Collective Action
+                </span>
+                <h2 class="text-xl sm:text-2xl font-black text-slate-900">
+                    Scaling Sustainable Healthcare Solutions
+                </h2>
+                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    By partnering with county health boards, clinical research institutions, universities, and pharmaceutical distributors, LBE creates resilient support networks that lower diagnostic barriers for families.
+                </p>
+            </div>
+        </div>
+    </div>
+
     <!-- Partnership Streams -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <div class="p-6 rounded-3xl bg-white border border-purple-100 shadow-xs space-y-2">

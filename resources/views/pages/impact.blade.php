@@ -30,6 +30,32 @@
         </p>
     </div>
 
+    <!-- Human Stories & Living Beyond Epilepsy Feature -->
+    <div class="relative rounded-3xl overflow-hidden shadow-xl border border-purple-100 bg-white">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-0 items-center">
+            <div class="lg:col-span-5 relative h-72 sm:h-96">
+                <img src="{{ asset('images/spirited-young-woman.jpg') }}" alt="Confident smiling African young woman thriving with medical support" class="w-full h-full object-cover">
+                <div class="absolute bottom-3 left-3 bg-slate-900/80 backdrop-blur-md px-3 py-1.5 rounded-xl text-white text-xs font-bold">
+                    Thriving in Kenya • Dignified Living
+                </div>
+            </div>
+            <div class="lg:col-span-7 p-6 sm:p-10 space-y-4">
+                <span class="text-[11px] font-black uppercase tracking-wider text-[#45017A] bg-purple-100 px-3 py-1 rounded-full">
+                    Voices of Hope
+                </span>
+                <h2 class="text-xl sm:text-3xl font-black text-slate-900 leading-tight">
+                    "My Diagnosis Was the Beginning of My Life, Not the End"
+                </h2>
+                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed italic">
+                    "For three years during secondary school, recurring seizures caused me to withdraw in shame because my neighbors believed it was a family curse. When our community health worker guided us to a clinical evaluation in Kitale, everything changed. Adhering to daily anti-seizure medication gave me control back. Today, I am studying at university and speaking out so no child has to hide."
+                </p>
+                <div class="pt-2 text-xs text-slate-500 font-bold">
+                    — Anonymized Youth Advocate, Trans-Nzoia County Pilot
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Verified Milestones (Trans-Nzoia Pilot Phase) -->
     <div class="space-y-6">
         <h2 class="text-2xl font-bold text-slate-900">Current Pilot Progress (Trans-Nzoia County)</h2>

@@ -93,12 +93,22 @@
     </div>
 
     <!-- Complete Seizure First Aid Protocol -->
-    <div class="bg-gradient-to-br from-purple-900 to-indigo-950 rounded-3xl p-8 sm:p-12 text-white space-y-8">
-        <div>
-            <span class="text-xs font-bold uppercase tracking-wider text-purple-300 bg-purple-800/80 px-3 py-1 rounded-full">
-                Step-by-Step Clinical Protocol
-            </span>
-            <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-3">What To Do During a Seizure</h2>
+    <div id="first-aid" class="bg-gradient-to-br from-[#320059] to-[#1F0038] rounded-3xl p-8 sm:p-12 text-white space-y-8 border border-purple-800 shadow-xl">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-7 space-y-3">
+                <span class="text-xs font-bold uppercase tracking-wider text-[#F29000] bg-white/10 px-3 py-1 rounded-full border border-white/10">
+                    Step-by-Step Clinical Protocol
+                </span>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">What To Do During a Seizure</h2>
+                <p class="text-xs sm:text-sm text-purple-200 leading-relaxed">
+                    Most convulsive seizures end on their own within 1 to 2 minutes. Your primary role is to keep the person safe from injury, protect their head, and maintain a clear airway.
+                </p>
+            </div>
+            <div class="lg:col-span-5">
+                <div class="rounded-2xl overflow-hidden shadow-lg border border-white/20">
+                    <img src="{{ asset('images/first-aid-care.jpg') }}" alt="Gentle seizure first aid care in Kenya" class="w-full h-52 sm:h-60 object-cover">
+                </div>
+            </div>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">

@@ -19,6 +19,73 @@
 </div>
 
 <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-16">
+    <!-- Trans-Nzoia Regional Focus & Mount Elgon Landscape -->
+    <div class="relative rounded-3xl overflow-hidden border border-purple-100 shadow-xl bg-white">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
+            <div class="lg:col-span-7 p-8 sm:p-12 space-y-4 flex flex-col justify-center">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-50 text-[#45017A] text-xs font-black uppercase tracking-wider w-fit">
+                    <span class="w-2 h-2 rounded-full bg-[#F29000]"></span>
+                    <span>County Pilot Region</span>
+                </div>
+                <h2 class="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+                    Rooted in Trans-Nzoia: The Mount Elgon Healthcare Pilot
+                </h2>
+                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    Trans-Nzoia County—stretching from the agricultural plains of Kitale up to the lush slopes of Mount Elgon—presents unique healthcare navigation challenges. Rural distance to diagnostic facilities, misconceptions regarding seizure disorders, and limited specialized neurologist access mean that early intervention is vital.
+                </p>
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2 text-xs font-bold text-[#45017A]">
+                    <div class="p-3 rounded-xl bg-purple-50/60 border border-purple-100 text-center">
+                        <span class="block text-slate-900 font-black text-sm">Kitale Base</span>
+                        <span class="text-[11px] text-slate-500">Central Referral</span>
+                    </div>
+                    <div class="p-3 rounded-xl bg-purple-50/60 border border-purple-100 text-center">
+                        <span class="block text-slate-900 font-black text-sm">5 Sub-Counties</span>
+                        <span class="text-[11px] text-slate-500">Full Coverage</span>
+                    </div>
+                    <div class="p-3 rounded-xl bg-purple-50/60 border border-purple-100 text-center col-span-2 sm:col-span-1">
+                        <span class="block text-[#F29000] font-black text-sm">Community Led</span>
+                        <span class="text-[11px] text-slate-500">Local Volunteers</span>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:col-span-5 relative min-h-64 sm:min-h-80">
+                <img src="{{ asset('images/trans-nzoia-landscape.jpg') }}" alt="Mount Elgon National Park and forest landscape in Trans-Nzoia, Kenya" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent lg:hidden"></div>
+                <div class="absolute bottom-3 left-3 right-3 text-white text-[11px] font-bold p-2 bg-black/40 backdrop-blur-sm rounded-xl">
+                    📍 Mount Elgon & Trans-Nzoia County Landscape
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Community Health Promoters in Action -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div class="rounded-3xl overflow-hidden shadow-lg border border-purple-100">
+            <img src="{{ asset('images/chw-training.jpg') }}" alt="Community Health Promoters in Kenya training for epilepsy awareness" class="w-full h-72 object-cover">
+            <div class="p-4 bg-white text-xs text-slate-600">
+                <span class="font-bold text-[#45017A] block">Grassroots Mobilization:</span>
+                Empowering Community Health Promoters (CHPs) with clinical seizure first aid training and stigma-reduction toolkits.
+            </div>
+        </div>
+
+        <div class="space-y-4">
+            <span class="text-xs font-black uppercase tracking-wider text-[#45017A] bg-purple-100 px-3 py-1 rounded-full">
+                Frontline Impact
+            </span>
+            <h2 class="text-2xl sm:text-3xl font-black text-slate-900">
+                Bridging the Gap Between Clinics & Households
+            </h2>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Families facing first-time seizures often delay clinical visits because of superstition or fear of high diagnostic costs. By equipping community leaders and local champions with knowledge, LBE ensures families find verified care at Kitale County Referral Hospital and sub-county dispensaries without delay.
+            </p>
+            <div class="pt-2">
+                <a href="{{ route('navigator') }}" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#45017A] text-white font-bold text-xs shadow hover:bg-[#320059] transition">
+                    <span>Find Verified Facilities in Trans-Nzoia →</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
     <!-- Mission & Vision -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div class="p-8 rounded-3xl bg-white border border-purple-100 shadow-xs space-y-3">
