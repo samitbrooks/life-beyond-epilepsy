@@ -83,3 +83,4 @@ return [
         'copyright' => 'All rights reserved. Life Beyond Epilepsy (LBE).',
     ],
 ];
+

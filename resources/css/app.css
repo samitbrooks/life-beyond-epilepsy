@@ -4,6 +4,20 @@
 @source '../../storage/framework/views/*.php';
 
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-sans: 'Lato', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Custom smooth transitions for dropdown menus */
+.dropdown-menu {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(6px);
+    transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dropdown-group:hover .dropdown-menu,
+.dropdown-group:focus-within .dropdown-menu {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
 }

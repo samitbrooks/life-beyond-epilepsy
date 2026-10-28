@@ -2,10 +2,13 @@
 
 namespace Tests\Feature;
 
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
 class PagesTest extends TestCase
 {
+    use RefreshDatabase;
+
     public function test_all_core_pages_render_successfully(): void
     {
         $routes = [
@@ -42,7 +45,7 @@ class PagesTest extends TestCase
         $enResponse = $this->get('/?lang=en');
         $enResponse->assertStatus(200);
         $enResponse->assertSee('Living Fully Beyond Epilepsy');
-        $enResponse->assertSee('Trans-Nzoia County Pilot');
+        $enResponse->assertSee('Trans-Nzoia Pilot');
     }
 
     public function test_contact_form_submission(): void
@@ -56,5 +59,9 @@ class PagesTest extends TestCase
         ]);
 
         $response->assertSessionHas('success');
+        $this->assertDatabaseHas('enquiries', [
+            'name' => 'John Wafula',
+            'subject' => 'School Training Request',
+        ]);
     }
 }

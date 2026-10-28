@@ -12,23 +12,21 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url()->current() }}">
     
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600,700&display=swap" rel="stylesheet" />
+    <!-- Lato Typeface (Google Fonts) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&display=swap" rel="stylesheet">
 
     <!-- Compiled CSS & JS via Vite -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased font-sans selection:bg-purple-200 selection:text-purple-900 flex flex-col min-h-screen">
+<body class="bg-white text-slate-800 antialiased font-sans selection:bg-purple-200 selection:text-purple-900 flex flex-col min-h-screen">
     <!-- Skip link for accessibility -->
     <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:px-4 focus:py-2 focus:bg-purple-700 focus:text-white focus:rounded-md focus:shadow-lg">
         Skip to main content
     </a>
 
-    <!-- Emergency Medical Banner (Top Priority) -->
-    @include('partials.emergency-banner')
-
-    <!-- Navigation Header -->
+    <!-- Navigation Header (Directly at top - NO toolbar above navbar) -->
     @include('partials.header')
 
     <!-- Flash notifications -->
@@ -66,6 +64,19 @@
                     }
                 });
             }
+
+            // Mobile Accordion Dropdowns
+            document.querySelectorAll('.mobile-dropdown-toggle').forEach(toggle => {
+                toggle.addEventListener('click', () => {
+                    const targetId = toggle.getAttribute('data-target');
+                    const target = document.getElementById(targetId);
+                    const icon = toggle.querySelector('.accordion-chevron');
+                    if (target) {
+                        target.classList.toggle('hidden');
+                        if (icon) icon.classList.toggle('rotate-180');
+                    }
+                });
+            });
         });
     </script>
     @stack('scripts')

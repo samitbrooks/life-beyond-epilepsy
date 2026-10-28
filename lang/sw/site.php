@@ -83,3 +83,4 @@ return [
         'copyright' => 'Haki zote zimehifadhiwa. Life Beyond Epilepsy (LBE).',
     ],
 ];
+

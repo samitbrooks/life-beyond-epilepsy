@@ -2,13 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Enquiry;
+use App\Models\Event;
+use App\Models\Facility;
+use App\Models\Volunteer;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
     public function home()
     {
-        return view('pages.home');
+        $events = Event::where('is_published', true)->orderBy('event_date')->take(2)->get();
+        return view('pages.home', compact('events'));
     }
 
     public function about()
@@ -23,7 +28,8 @@ class PageController extends Controller
 
     public function navigator()
     {
-        return view('pages.navigator');
+        $facilities = Facility::where('verification_status', 'Verified')->get();
+        return view('pages.navigator', compact('facilities'));
     }
 
     public function medicalSupport()
@@ -38,7 +44,8 @@ class PageController extends Controller
 
     public function events()
     {
-        return view('pages.events');
+        $events = Event::where('is_published', true)->orderBy('event_date')->get();
+        return view('pages.events', compact('events'));
     }
 
     public function partnerships()
@@ -81,7 +88,15 @@ class PageController extends Controller
             'consent' => 'accepted',
         ]);
 
-        // In production, dispatch notification or store securely according to Kenya Data Protection Act.
+        Enquiry::create([
+            'name' => $validated['name'],
+            'email_or_phone' => $validated['email_or_phone'],
+            'subject' => $validated['subject'],
+            'message' => $validated['message'],
+            'consent' => true,
+            'status' => 'New',
+        ]);
+
         return back()->with('success', app()->getLocale() === 'sw' 
             ? 'Asante kwa kuwasiliana nasi. Ujumbe wako umepokelewa na tutakujibu wakati wa saa za kazi.' 
             : 'Thank you for contacting us. Your message has been received and our team will respond during business hours.');
@@ -96,6 +111,16 @@ class PageController extends Controller
             'interests' => 'required|array',
             'experience' => 'nullable|string|max:1000',
             'consent' => 'accepted',
+        ]);
+
+        Volunteer::create([
+            'full_name' => $validated['full_name'],
+            'contact_info' => $validated['contact_info'],
+            'location' => $validated['location'],
+            'interests' => $validated['interests'],
+            'experience' => $validated['experience'] ?? null,
+            'consent' => true,
+            'status' => 'Pending',
         ]);
 
         return back()->with('success', app()->getLocale() === 'sw'
