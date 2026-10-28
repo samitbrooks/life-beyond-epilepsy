@@ -45,7 +45,7 @@ class PagesTest extends TestCase
         $enResponse = $this->get('/?lang=en');
         $enResponse->assertStatus(200);
         $enResponse->assertSee('Living Fully Beyond Epilepsy');
-        $enResponse->assertSee('Trans-Nzoia Pilot');
+        $enResponse->assertSee('Trans-Nzoia County');
     }
 
     public function test_contact_form_submission(): void

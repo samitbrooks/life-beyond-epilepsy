@@ -4,40 +4,58 @@
 
 @section('content')
 <!-- Hero Section -->
-<section class="relative overflow-hidden bg-gradient-to-b from-purple-900 via-purple-800 to-indigo-900 text-white py-16 sm:py-24">
+<section class="relative overflow-hidden bg-gradient-to-br from-[#320059] via-[#45017A] to-[#1F0038] text-white py-16 sm:py-24">
     <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:16px_16px]"></div>
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="max-w-3xl space-y-6">
-            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-purple-700/60 border border-purple-400/30 text-purple-200 text-xs sm:text-sm font-semibold">
-                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-purple-200 text-xs sm:text-sm font-bold">
+                <span class="w-2 h-2 rounded-full bg-[#F29000] animate-pulse"></span>
                 <span>{{ __('site.pilot_badge') }}</span>
             </div>
             
-            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight">
                 {{ __('site.home.hero_title') }}
             </h1>
 
-            <p class="text-base sm:text-xl text-purple-100/90 leading-relaxed">
+            <p class="text-base sm:text-xl text-purple-100/90 leading-relaxed font-normal">
                 {{ __('site.home.hero_subtitle') }}
             </p>
 
             <!-- Main CTA Buttons (From Section 3 Home requirements) -->
             <div class="flex flex-wrap items-center gap-3 pt-2">
-                <a href="{{ route('awareness') }}" class="px-5 py-3 rounded-xl bg-white text-purple-900 font-bold text-sm shadow hover:bg-purple-50 transition flex items-center gap-2">
+                <a href="{{ route('awareness') }}" class="px-5 py-3 rounded-xl bg-white text-[#45017A] font-black text-sm shadow hover:bg-purple-50 transition flex items-center gap-2">
                     <span>{{ __('site.home.cta_learn') }}</span>
                     <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                 </a>
-                <a href="{{ route('navigator') }}" class="px-5 py-3 rounded-xl bg-purple-600 text-white font-bold text-sm shadow hover:bg-purple-500 border border-purple-400/30 transition flex items-center gap-2">
-                    <svg class="w-4 h-4 text-emerald-300" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+                <a href="{{ route('navigator') }}" class="px-5 py-3 rounded-xl bg-[#8034FA] text-white font-bold text-sm shadow hover:bg-[#6D28D9] border border-purple-400/30 transition flex items-center gap-2">
+                    <svg class="w-4 h-4 text-[#F29000]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
                     <span>{{ __('site.home.cta_navigator') }}</span>
                 </a>
-                <a href="{{ route('get-involved') }}" class="px-5 py-3 rounded-xl bg-purple-800/80 text-purple-100 font-semibold text-sm hover:bg-purple-700/80 border border-purple-600 transition">
+                <a href="{{ route('get-involved') }}" class="px-5 py-3 rounded-xl bg-white/10 text-purple-100 font-bold text-sm hover:bg-white/20 border border-white/20 transition">
                     {{ __('site.home.cta_involved') }}
                 </a>
-                <a href="{{ route('donate') }}" class="px-5 py-3 rounded-xl bg-amber-500 text-slate-950 font-bold text-sm shadow hover:bg-amber-400 transition">
+                <a href="{{ route('donate') }}" class="px-5 py-3 rounded-xl bg-[#F29000] text-slate-950 font-black text-sm shadow hover:bg-[#D97706] transition">
                     {{ __('site.home.cta_donate') }}
                 </a>
             </div>
+        </div>
+    </div>
+</section>
+
+<!-- Epilepsy.com Style Emergency First Aid Action Ribbon -->
+<section class="bg-red-50 border-b border-red-200 py-3.5 px-4">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-xs sm:text-sm">
+        <div class="flex items-center gap-2.5 text-red-900 font-bold text-center sm:text-left">
+            <span class="w-2.5 h-2.5 rounded-full bg-red-600 animate-ping shrink-0"></span>
+            <span>Witnessing a seizure right now? Keep calm: do NOT put anything in their mouth, cushion head, and turn them on their side.</span>
+        </div>
+        <div class="flex items-center gap-2 shrink-0">
+            <a href="{{ route('awareness') }}#first-aid" class="text-xs font-black text-red-700 bg-white px-3 py-1 rounded-full border border-red-300 shadow-xs hover:bg-red-100 transition">
+                View 4-Step First Aid
+            </a>
+            <a href="tel:999" class="text-xs font-black text-white bg-red-700 px-3 py-1 rounded-full shadow-xs hover:bg-red-800 transition">
+                Call 999 / 112
+            </a>
         </div>
     </div>
 </section>

@@ -5,6 +5,17 @@
 
 @theme {
     --font-sans: 'Lato', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    
+    /* Official Life Beyond Epilepsy Brand Palette */
+    --color-brand-purple: #45017A;
+    --color-brand-purple-dark: #320059;
+    --color-brand-purple-light: #5B0C9C;
+    --color-brand-violet: #8034FA;
+    --color-brand-lavender: #E9D5FF;
+    --color-brand-lavender-subtle: #FAF5FF;
+    --color-brand-sun: #F29000;
+    --color-brand-sun-light: #FEF3C7;
+    --color-brand-sun-dark: #D97706;
 }
 
 /* Custom smooth transitions for dropdown menus */
@@ -12,7 +23,7 @@
     visibility: hidden;
     opacity: 0;
     transform: translateY(6px);
-    transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .dropdown-group:hover .dropdown-menu,
