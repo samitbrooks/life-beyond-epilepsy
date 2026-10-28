@@ -47,14 +47,14 @@
     <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-xs sm:text-sm">
         <div class="flex items-center gap-2.5 text-red-900 font-bold text-center sm:text-left">
             <span class="w-2.5 h-2.5 rounded-full bg-red-600 animate-ping shrink-0"></span>
-            <span>Witnessing a seizure right now? Keep calm: do NOT put anything in their mouth, cushion head, and turn them on their side.</span>
+            <span>{{ __('site.emergency_ribbon.witnessing') }}</span>
         </div>
         <div class="flex items-center gap-2 shrink-0">
             <a href="{{ route('awareness') }}#first-aid" class="text-xs font-black text-red-700 bg-white px-3 py-1 rounded-full border border-red-300 shadow-xs hover:bg-red-100 transition">
-                View 4-Step First Aid
+                {{ __('site.emergency_ribbon.view_guide') }}
             </a>
             <a href="tel:999" class="text-xs font-black text-white bg-red-700 px-3 py-1 rounded-full shadow-xs hover:bg-red-800 transition">
-                Call 999 / 112
+                {{ __('site.emergency_ribbon.call_emergency') }}
             </a>
         </div>
     </div>
@@ -176,23 +176,22 @@
         <div class="bg-gradient-to-r from-purple-900 to-indigo-900 rounded-3xl p-8 sm:p-12 text-white shadow-xl flex flex-col lg:flex-row items-center justify-between gap-8">
             <div class="space-y-4 max-w-2xl">
                 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-700/80 text-purple-200 text-xs font-semibold">
-                    <span>Core Feature</span> • <span>Bilingual (English / Kiswahili)</span> • <span>100% Free</span>
+                    <span>{{ __('site.home.navigator_card_badge') }}</span>
                 </div>
                 <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight">
-                    Smart Health Navigator & Facility Finder
+                    {{ __('site.home.navigator_card_title') }}
                 </h2>
                 <p class="text-sm sm:text-base text-purple-100/90 leading-relaxed">
-                    Unsure where to find an accredited clinic, EEG testing, or epilepsy consultation in Trans-Nzoia?
-                    Our free, voice-enabled assistant helps you find verified local care without medical guesswork.
+                    {{ __('site.home.navigator_card_desc') }}
                 </p>
                 <div class="flex items-center gap-4 text-xs text-purple-300">
                     <span class="flex items-center gap-1.5">
                         <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                        No diagnosis, purely navigation
+                        {{ __('site.home.navigator_card_point1') }}
                     </span>
                     <span class="flex items-center gap-1.5">
                         <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                        Voice-to-Text with transcript check
+                        {{ __('site.home.navigator_card_point2') }}
                     </span>
                 </div>
             </div>
@@ -200,7 +199,7 @@
             <div class="shrink-0 w-full lg:w-auto">
                 <a href="{{ route('navigator') }}" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl bg-white text-purple-950 font-extrabold text-base shadow-lg hover:bg-purple-50 transition transform hover:-translate-y-0.5">
                     <svg class="w-5 h-5 text-purple-700" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
-                    <span>Open Smart Navigator</span>
+                    <span>{{ __('site.home.navigator_card_btn') }}</span>
                 </a>
             </div>
         </div>
